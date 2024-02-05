@@ -1,0 +1,12 @@
+[Unit]
+Description=mcce service
+Wants=network-online.target
+
+[Service]
+Restart=always
+RestartSec=5s
+ExecStart=/home/fio/mbedCloudClientExample-aarch64.elf
+WorkingDirectory=/home/fio
+
+[Install]
+WantedBy=multi-user.target
